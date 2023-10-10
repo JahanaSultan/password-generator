@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>Random Password Generator</h1>
+        <p>
+          Create strong and secure passwords to keep your account safe online.
+        </p>
+      </div>
+      <div class="form-content">
+        <div class="image"><img src="assets/bg.svg" alt="" /></div>
+        <div class="password-container">
+          <div class="password-input-box">
+            <div class="form-control">
+              <input type="text" />
+              <span><i class="ri-loop-left-line"></i></span>
+            </div>
+            <button>COPY</button>
+          </div>
+          <div class="checkboxes">
+            <div class="form-control">
+              <input type="checkbox" name="uppercase" id="uppercase" />
+              <label for="uppercase">ABC</label>
+            </div>
+            <div class="form-control">
+              <input type="checkbox" name="lowercase" id="lowercase" />
+              <label for="lowercase">abc</label>
+            </div>
+            <div class="form-control">
+              <input type="checkbox" name="number" id="number" />
+              <label for="number">123</label>
+            </div>
+            <div class="form-control">
+              <input type="checkbox" name="char" id="char" />
+              <label for="char">#$%</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
