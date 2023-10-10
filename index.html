@@ -12,43 +12,46 @@
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="heading">
-        <h1>Random Password Generator</h1>
-        <p>
-          Create strong and secure passwords to keep your account safe online.
-        </p>
+    <h1>Password Generator</h1>
+    <p>Create strong and secure passwords to keep your account safe online.</p>
+    <div class="password-container">
+      <div class="image">
+        <img src="assets/bg.svg" alt="" />
       </div>
-      <div class="form-content">
-        <div class="image"><img src="assets/bg.svg" alt="" /></div>
-        <div class="password-container">
-          <div class="password-input-box">
-            <div class="form-control">
-              <input type="text" />
-              <span><i class="ri-loop-left-line"></i></span>
-            </div>
-            <button>COPY</button>
+      <div class="password-side">
+        <div class="password-box">
+          <div class="password-box__copy">
+            <p class="password"></p>
+            <button><i class="ri-loop-left-line"></i></button>
           </div>
-          <div class="checkboxes">
+          <button class="copy-button">COPY</button>
+          <div class="password-options">
             <div class="form-control">
-              <input type="checkbox" name="uppercase" id="uppercase" />
+              <input type="checkbox" name="uppercase" id="uppercase">
               <label for="uppercase">ABC</label>
             </div>
             <div class="form-control">
-              <input type="checkbox" name="lowercase" id="lowercase" />
+              <input type="checkbox" name="lowercase" id="lowercase">
               <label for="lowercase">abc</label>
             </div>
             <div class="form-control">
-              <input type="checkbox" name="number" id="number" />
+              <input type="checkbox" name="number" id="number">
               <label for="number">123</label>
             </div>
             <div class="form-control">
-              <input type="checkbox" name="char" id="char" />
-              <label for="char">#$%</label>
+              <input type="checkbox" name="char" id="char">
+              <label for="char">$#&</label>
+            </div>
+            <div class="form-control">
+              <input type="number" name="length" id="length" value=6 defaultValue=6>
+              <label for="length">Length</label>
             </div>
           </div>
+         
         </div>
       </div>
     </div>
+
+    <script src="assets/main.js"></script>
   </body>
 </html>

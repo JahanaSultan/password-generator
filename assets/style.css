@@ -2,77 +2,142 @@
     font-family: "Consolas";
     src: url(./CONSOLA.TTF);
 }
-*{
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 body {
     background-color: #fff9f5;
-    font-family: Geneva, Tahoma, sans-serif;
 }
 
-.container .form-content {
+body> :is(h1, p) {
+    text-align: center;
+}
+
+.password-container {
     display: flex;
     align-items: center;
+    margin-top: 50px;
+    width: 80%;
+    margin: 50px auto;
 }
 
-.container .form-content>div {
-    flex: 1;
+.password-container>div {
+    flex: 1 0 50%;
 }
 
-.container h1 {
-    text-align: center;
-    font-size: 2.5rem;
-}
-
-.container p {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 100;
-}
-
-.container img {
+.password-container .image img {
     width: 100%;
     height: 350px;
     object-fit: contain;
-
 }
 
-.container .image {
-    text-align: center;
+.password-container .password-box {
+    display: flex;flex-direction: column;
+    align-items: center;
 }
 
-.container .form-content .password-container .password-input-box .form-control {
-    width: 400px;
+.password-container .password-box .password-box__copy {
+    width: 80%;
     height: 40px;
-    position: relative;
-}
-
-.container .form-content .password-container .password-input-box .form-control input {
-    width: 100%;
-    height: 100%;
     border-radius: 100vmax;
-    border: 1px solid #00000057;
-    padding-left: 10px;
-    background-color: transparent;
-    outline: 0;
-    z-index: 100!important;
-    position: relative;
+    border: 1px solid #00000070;
+    display: flex;
+    overflow: hidden;
 }
 
-.container .form-content .password-container .password-input-box .form-control span {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60px;
-    height: 100%;
+.password-container .password-box .password-box__copy p {
+    width: calc(100% - 50px);
+    height: 40px;
+    background-color: transparent;
+}
+
+.password-container .password-box .password-box__copy button {
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.copy-button {
+    margin: 25px 0;
+    width: 100px;
+    height: 40px;
+    border: 1px solid #2562e4;
+    border-radius: 100vmax;
+    background-color: #2562e4;
+    color: #fff;
+    cursor: pointer;
+}
+
+.password-options {
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-radius: 0 100vmax 100vmax 0;
+    gap: 40px;
     font-size: 20px;
+}
+
+.form-control{
+    display: flex;
+    gap: 5px;
+    align-items: center;
     cursor: pointer;
-    background-color: #fff9f5;
-    z-index: 0;
+}
+.form-control *{
+  cursor: pointer;
+}
+
+.form-control input[type="number"]{
+    width: 30px;
+    height: 30px;
+      border: 1px solid currentColor;
+      border-radius: 5px;
+      padding-left: 5px;
+      outline: 0;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--form-background);
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 30px;
+    height: 30px;
+    border: 1px solid currentColor;
+    border-radius: 5px;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #2562e4;
+    background-color: CanvasText;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
 }
