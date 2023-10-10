@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Merriweather:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -16,38 +22,46 @@
     <p>Create strong and secure passwords to keep your account safe online.</p>
     <div class="password-container">
       <div class="image">
-        <img src="assets/bg.svg" alt="" />
+        <img src="assets/house.svg" alt="" class="a-image" />
       </div>
       <div class="password-side">
         <div class="password-box">
           <div class="password-box__copy">
             <p class="password"></p>
-            <button><i class="ri-loop-left-line"></i></button>
+            <button onclick="password_wrt()">
+              <i class="ri-loop-left-line"></i>
+            </button>
           </div>
-          <button class="copy-button">COPY</button>
+          <button class="copy-button" onclick="copyCode(this)">COPY</button>
           <div class="password-options">
             <div class="form-control">
-              <input type="checkbox" name="uppercase" id="uppercase">
+              <input type="checkbox" name="uppercase" id="uppercase" checked />
               <label for="uppercase">ABC</label>
             </div>
             <div class="form-control">
-              <input type="checkbox" name="lowercase" id="lowercase">
+              <input type="checkbox" name="lowercase" id="lowercase" checked />
               <label for="lowercase">abc</label>
             </div>
             <div class="form-control">
-              <input type="checkbox" name="number" id="number">
-              <label for="number">123</label>
+              <input type="checkbox" name="numbers" id="numbers" checked />
+              <label for="numbers">123</label>
             </div>
             <div class="form-control">
-              <input type="checkbox" name="char" id="char">
-              <label for="char">$#&</label>
+              <input type="checkbox" name="symbols" id="symbols" checked />
+              <label for="symbols">$#&</label>
             </div>
             <div class="form-control">
-              <input type="number" name="length" id="length" value=6 defaultValue=6>
+              <input
+                type="number"
+                name="length"
+                id="length"
+                value="12"
+                defaultValue="12"
+                onchange="password_wrt1(this)"
+              />
               <label for="length">Length</label>
             </div>
           </div>
-         
         </div>
       </div>
     </div>

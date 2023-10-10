@@ -5,17 +5,19 @@
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
+
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Corben', serif;
 }
 
 body {
@@ -24,14 +26,16 @@ body {
 
 body> :is(h1, p) {
     text-align: center;
+    margin: 5px;
 }
 
 .password-container {
     display: flex;
     align-items: center;
     margin-top: 50px;
-    width: 80%;
-    margin: 50px auto;
+    padding: 0 50px;
+    margin: 50px 0;
+
 }
 
 .password-container>div {
@@ -45,23 +49,31 @@ body> :is(h1, p) {
 }
 
 .password-container .password-box {
-    display: flex;flex-direction: column;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
 .password-container .password-box .password-box__copy {
-    width: 80%;
+    width: 350px;
     height: 40px;
     border-radius: 100vmax;
-    border: 1px solid #00000070;
+    border: 1px solid #00000084;
     display: flex;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 
 .password-container .password-box .password-box__copy p {
     width: calc(100% - 50px);
     height: 40px;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 14px;
+    font-family: 'Merriweather', serif;
 }
 
 .password-container .password-box .password-box__copy button {
@@ -69,7 +81,7 @@ body> :is(h1, p) {
     height: 40px;
     cursor: pointer;
     border: 0;
-    background-color: transparent;
+    background-color: #fff9f5;
     font-size: 20px;
 }
 
@@ -77,11 +89,15 @@ body> :is(h1, p) {
     margin: 25px 0;
     width: 100px;
     height: 40px;
-    border: 1px solid #2562e4;
+    border: 1px solid #7e57c2;
     border-radius: 100vmax;
-    background-color: #2562e4;
+    background-color: #7e57c2;
     color: #fff;
     cursor: pointer;
+}
+
+.copy-button i {
+    font-size: 20px;
 }
 
 .password-options {
@@ -91,23 +107,24 @@ body> :is(h1, p) {
     font-size: 20px;
 }
 
-.form-control{
+.form-control {
     display: flex;
     gap: 5px;
     align-items: center;
     cursor: pointer;
 }
-.form-control *{
-  cursor: pointer;
+
+.form-control * {
+    cursor: pointer;
 }
 
-.form-control input[type="number"]{
+.form-control input[type="number"] {
     width: 30px;
     height: 30px;
-      border: 1px solid currentColor;
-      border-radius: 5px;
-      padding-left: 5px;
-      outline: 0;
+    border: 1px solid currentColor;
+    border-radius: 5px;
+    padding-left: 5px;
+    outline: 0;
 }
 
 input[type="checkbox"] {
@@ -134,10 +151,25 @@ input[type="checkbox"]::before {
     transform: scale(0);
     transform-origin: bottom left;
     transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em #2562e4;
+    box-shadow: inset 1em 1em #7e57c2;
     background-color: CanvasText;
 }
 
 input[type="checkbox"]:checked::before {
     transform: scale(1);
+}
+
+@media screen and (max-width: 1080px) {
+    .password-container {
+        flex-wrap: wrap;
+    }
+
+    .password-container>div {
+        flex: 1 0 100%;
+    }
+
+    .password-options {
+        flex-wrap: wrap;
+    }
+
 }
