@@ -162,7 +162,9 @@ input[type="checkbox"]:checked::before {
 @media screen and (max-width: 1080px) {
     .password-container {
         flex-wrap: wrap;
+        padding: 0 20px;
     }
+
 
     .password-container>div {
         flex: 1 0 100%;
@@ -172,4 +174,21 @@ input[type="checkbox"]:checked::before {
         flex-wrap: wrap;
     }
 
+}
+
+@media screen and (max-width: 450px) {
+    .password-container {
+        padding: 0 10px;
+
+    }
+
+    .password-container .password-box .password-box__copy {
+        width: 100%;
+    }
+    .password-container .password-box .password-box__copy button{
+        height: fit-content;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
 }
