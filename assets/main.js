@@ -3,7 +3,6 @@ let length_input = document.querySelector("input#length")
 let checkboxes = [...document.querySelectorAll("input[type='checkbox']")]
 let psw = document.querySelector(".password-box__copy")
 let image = document.querySelector("img")
-let reload=document.querySelector(".recreate")
 function generatePassword(length, options) {
   const defaultOptions = {
     uppercase: true,
@@ -48,7 +47,7 @@ const password_wrt = () => {
   checkboxes.map(e => {
     object[e.name] = e.checked
   })
-  password_box.innerHTML = generatePassword(length_input.value, objects)
+  password_box.innerHTML = generatePassword(length_input.value, object)
 }
 
 
