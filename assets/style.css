@@ -83,6 +83,7 @@ body> :is(h1, p) {
     border: 0;
     background-color: #fff9f5;
     font-size: 20px;
+    transition: 0.7s;
 }
 
 .copy-button {
@@ -185,10 +186,12 @@ input[type="checkbox"]:checked::before {
     .password-container .password-box .password-box__copy {
         width: 100%;
     }
-    .password-container .password-box .password-box__copy button{
+
+    .password-container .password-box .password-box__copy button {
         height: fit-content;
     }
-    h1{
+
+    h1 {
         font-size: 1.5rem;
     }
 }

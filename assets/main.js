@@ -3,7 +3,7 @@ let length_input = document.querySelector("input#length")
 let checkboxes = [...document.querySelectorAll("input[type='checkbox']")]
 let psw = document.querySelector(".password-box__copy")
 let image = document.querySelector("img")
-
+let reload=document.querySelector(".recreate")
 function generatePassword(length, options) {
   const defaultOptions = {
     uppercase: true,
@@ -12,7 +12,6 @@ function generatePassword(length, options) {
     symbols: true,
   };
 
-  // sourcery skip: dont-reassign-parameters
   options = Object.assign({}, defaultOptions, options);
 
   const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -45,9 +44,9 @@ function generatePassword(length, options) {
 
 
 const password_wrt = () => {
-  let objects = {}
+  let object = {}
   checkboxes.map(e => {
-    objects[e.name] = e.checked
+    object[e.name] = e.checked
   })
   password_box.innerHTML = generatePassword(length_input.value, objects)
 }
